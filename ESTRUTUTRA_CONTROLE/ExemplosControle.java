@@ -108,6 +108,60 @@ for(int i = 1; i <= 5; i++) {
 
 }
 
+//exemplos práticos
+
+//analise numérica
+int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+int somaPar = 0;
+int somaImpar = 0;
+
+//como eu vou chamar a unidade da minha lista : lista
+for(int num : numeros){
+
+    if (num % 2 == 0) {
+        
+        somaPar += num;
+    } else {
+
+        somaImpar += num;
+    }
+    //verificar se o número é impar ou par
+    if (num % 3 == 0) {
+        System.out.println("este némero é impar");
+    
+    } else{
+
+        System.out.println("Este numero é par");
+    }
+
+}
+
+System.out.println("Soma pares: " + somaPar);
+System.out.println("Soma impares: " + somaImpar);
+
+//break => ejetar um loop
+//continue => pular uma execução
+
+//variáveis temporárias podem repetir seu nome
+for(int i = 1; i <= 10; i++){
+
+    if (i == 2) {
+        
+        continue;
+    
+    }
+    System.out.println(i);
+
+    if (i == 5) {
+        
+        break;
+        
+    }
+}
+
+
+
 }
     
 }
