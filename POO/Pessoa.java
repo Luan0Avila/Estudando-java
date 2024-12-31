@@ -7,6 +7,7 @@ package POO;
 //Molde do objeto = classe
 //cria um novo objeto = instância
 
+
 public class Pessoa {
 
     // Atributos = caracteristicas
@@ -15,6 +16,7 @@ public class Pessoa {
     private double altura;
     private double peso;
 
+    //função construtora
     public Pessoa(){
 
         this.nome = "Sem nome";
@@ -24,6 +26,15 @@ public class Pessoa {
 
     }
 
+    //função construtora com atributos
+    public Pessoa(String nome, int idade, double altura, double peso){
+
+        this.nome = nome;
+        this.idade = idade;
+        this.altura = altura;
+        this.peso = peso;
+
+    }
     // Metodos -> ações da classe
     //setters e getters
 
@@ -76,5 +87,22 @@ public class Pessoa {
 
     }
 
+    public double calcularIMC(){
+        return peso / (altura * altura);
+    
+    }
 
+    public String classificacaoIMC() { 
+        double imc = calcularIMC();
+
+        if (imc < 18.5) return "Abaixo do peso";
+        if (imc < 25.0) return "Peso normal";
+        if (imc < 30) return "Acima do peso";
+        return "Obesidade";
+    }
+
+    public String apresentar() {
+
+        return "Olá me chamo " + nome + ", tenho " + idade + " anos " + ", tenho " + altura + " de altura, e peso" + peso + "kg"; 
+    }
 }

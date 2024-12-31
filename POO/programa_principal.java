@@ -21,6 +21,16 @@ public class programa_principal {
     System.out.println(pessoa1.getIdade());
     System.out.println(pessoa1.getAltura());
     System.out.println(pessoa1.getPeso());
-    
+
+    Pessoa pessoa2 = new Pessoa("Ladyane", 20, 1.50, 100);
+
+    System.out.println(pessoa2.getNome());
+
+    System.out.println(pessoa2.calcularIMC());
+
+    System.out.println(pessoa2.classificacaoIMC());
+
+    System.out.println(pessoa2.apresentar());
     }
+
 }
